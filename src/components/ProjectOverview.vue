@@ -40,7 +40,7 @@ export default defineComponent({
         refreshHash: function () {
             console.log(this.categories);
             var hash = window.location.hash.replace('#', '');
-            if (hash == 'All') {
+            if (hash == 'All' || hash == '') {
                 this.projects.forEach((project) => {
                     project.hidden = false;
                 });
@@ -118,8 +118,8 @@ h2 {
 .project {
     margin: 0.5rem;
     width: 23%;
-    min-width: 20rem;
-    min-height: 15rem;
+    width: 23rem;
+    height: 23rem;
     padding: 5%;
     background-color: var(--color-background-soft);
     border-radius: 1rem;
@@ -130,6 +130,22 @@ h2 {
 }
 .hidden {
     display: none;
+}
+
+.project img {
+    position: relative;
+    height: 60%;
+    object-fit: contain;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--color-heading);
+    text-align: center;
+    margin: 0;
 }
 .categoryList {
     display: flex;

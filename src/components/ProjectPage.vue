@@ -36,7 +36,7 @@ export default defineComponent({
                         var categories = text.split(/\r?\n/g)[0].split(';');
                         var transformedText = text
                             //Remove category text
-                            .replace(categories.join(';'), '')
+                            .replace(categories.join(';') + '\r\n', '')
                             //New line to html line break
                             .replace(/\r?\n/g, '<br />')
                             //Link to html link
