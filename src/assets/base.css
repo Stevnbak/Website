@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Secular+One&display=swap');
-/* color palette from <https://github.com/vuejs/theme> */
+
+/* color palette from <https://color.adobe.com/mythemes> theme: stevnbak.dk */
 :root {
     --color1: #161114;
     --color2: #401112;
@@ -19,15 +20,6 @@
     --color-heading: var(--color4);
     --color-text: var(--color5);
     --color-text-hover: var(--color3);
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    position: relative;
-    font-weight: normal;
 }
 
 body {
