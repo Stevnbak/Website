@@ -5,7 +5,7 @@
     </div>
     <br />
     <div class="projects">
-        <div v-for:="project in projects">
+        <div v-for:="project in projects" :class="project.hidden ? 'hidden' : ''">
             <a class="project" :href="'/Projects/' + project.title">
                 <h3>{{ project.title }}</h3>
                 <div class="categoryList">
@@ -24,6 +24,7 @@ type Project = {
     title: string;
     description: string;
     categories: string[];
+    hidden: boolean;
 };
 //Vue component
 import {defineComponent} from 'vue';
@@ -36,11 +37,27 @@ export default defineComponent({
         };
     },
     methods: {
-        selectCategory: function () {
-            console.log('Select category');
+        refreshHash: function () {
+            console.log(this.categories);
+            var hash = window.location.hash.replace('#', '');
+            if (hash == 'All') {
+                this.projects.forEach((project) => {
+                    project.hidden = false;
+                });
+            } else {
+                this.projects.forEach((project) => {
+                    console.log(project.categories);
+                    if (project.categories.includes(hash)) {
+                        project.hidden = false;
+                    } else {
+                        project.hidden = true;
+                    }
+                });
+            }
         },
     },
     async mounted() {
+        this.categories.push('All');
         //Load project list
         var projectFiles = [] as string[];
         await fetch('/projects/list.json')
@@ -59,7 +76,8 @@ export default defineComponent({
                     var project: Project = {
                         title: name.replace('.txt', ''),
                         description: lines[1],
-                        categories: lines[0].split(';'),
+                        categories: lines[0].replace('\r', '').split(';'),
+                        hidden: false,
                     };
                     project.categories.forEach((category) => {
                         if (!this.categories.includes(category)) {
@@ -69,6 +87,12 @@ export default defineComponent({
                     this.projects.push(project);
                 });
         }
+
+        //Filter for categories
+        this.refreshHash();
+        window.addEventListener('hashchange', () => {
+            this.refreshHash();
+        });
     },
 });
 </script>
@@ -87,11 +111,12 @@ h2 {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-start;
+    align-content: flex-start;
     flex-direction: row;
 }
 
 .project {
-    margin-right: 0;
+    margin: 0.5rem;
     width: 23%;
     min-width: 20rem;
     min-height: 15rem;
@@ -103,11 +128,15 @@ h2 {
     justify-content: space-between;
     align-items: center;
 }
+.hidden {
+    display: none;
+}
 .categoryList {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
     margin-bottom: 0.5rem;
 }
 

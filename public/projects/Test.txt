@@ -1,4 +1,4 @@
-TCF;Web;Solo
+TCF;Web
 This is a test page and description.
 
 **This text is bold**Break? *And this is italic* Uuuuhh a link [**here**](https://stevnbak.dk) Code snippets? `No problemo`
