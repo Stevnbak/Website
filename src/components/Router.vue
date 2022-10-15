@@ -2,13 +2,11 @@
 import {defineComponent} from 'vue';
 
 import Home from './HomePage.vue';
-import Test from './TestPage.vue';
 import Projects from './ProjectPage.vue';
 import NotFound from './404.vue';
 
 const routes = {
     '/': Home,
-    '/Test': Test,
     '/Projects': Projects,
 };
 

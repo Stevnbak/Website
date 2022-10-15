@@ -6,7 +6,6 @@
         </a>
         <div class="horizontal right nav">
             <a class="center hover" href="/">Home</a>
-            <a class="center hover" href="/Test">Test</a>
             <a class="center hover" href="/Projects">Projects</a>
         </div>
     </div>
