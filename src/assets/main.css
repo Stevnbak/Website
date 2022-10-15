@@ -60,8 +60,7 @@ a {
 
 @media (hover: hover) {
     .hover:hover {
-        background-color: hsla(0, 100%, 25%, 0.71);
-        color: var(--color-text-hover);
+        background-color: var(--color-border);
     }
 }
 

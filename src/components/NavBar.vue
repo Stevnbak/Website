@@ -40,6 +40,7 @@ export default defineComponent({
     width: 100%;
     height: 100%;
     background-color: var(--color-background-soft);
+    border: 2px solid var(--color-border);
 }
 .logo {
     width: 15%;
@@ -63,5 +64,6 @@ export default defineComponent({
     height: 100%;
     align-items: center;
     font-size: 1.25rem;
+    border: 2px solid var(--color-border);
 }
 </style>

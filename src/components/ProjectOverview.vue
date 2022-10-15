@@ -9,7 +9,7 @@
             <a class="project" :href="'/Projects/' + project.title">
                 <h3>{{ project.title }}</h3>
                 <div class="categoryList">
-                    <p v-for:="category in project.categories">{{ category }}</p>
+                    <a v-for:="category in project.categories" :href="'#' + category">{{ category }}</a>
                 </div>
                 <img :src="'/projects/' + project.title + '.png'" :alt="project.title + ' image'" />
                 <p>{{ project.description }}</p>
@@ -123,10 +123,14 @@ h2 {
     padding: 5%;
     background-color: var(--color-background-soft);
     border-radius: 1rem;
+    border: 2px solid var(--color-border);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+}
+.project:hover {
+    border: 2px solid var(--color-border-hover);
 }
 .hidden {
     display: none;
@@ -156,13 +160,18 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
-.categoryList p {
+.categoryList a {
     font-size: 0.9rem;
     color: var(--color-text);
     margin: 0;
     padding: 0 0.5rem 0 0.5rem;
     border-radius: 1rem;
     background-color: var(--color-border);
+    border: 2px solid var(--color-border);
+}
+
+.categoryList a:hover {
+    border: 2px solid var(--color-border-hover);
 }
 
 .select a {
@@ -171,7 +180,10 @@ h2 {
     color: var(--color-text);
     padding: 0 0.5rem 0 0.5rem;
     border-radius: 1rem;
-    border: none;
+    border: 2px solid var(--color-border);
     background-color: var(--color-border);
+}
+.select a:hover {
+    border: 2px solid var(--color-border-hover);
 }
 </style>
