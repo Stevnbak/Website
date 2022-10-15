@@ -24,7 +24,6 @@ export default defineComponent({
         });
         function refreshPage(): any {
             th.currentPath = window.location.pathname;
-            console.log('Projects...');
             if (th.currentPath == '/Projects') {
                 /*@ts-ignore*/
                 th.page = ProjectOverview;
@@ -42,13 +41,15 @@ export default defineComponent({
                             .replace(/\r?\n/g, '<br />')
                             //Link to html link
                             .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2">$1</a>')
+                            //Bold&Italic to html bold&italic
+                            .replace(/\*\*\*(.*?)\*\*\*/g, '<i> <p class="bold">$1</p> </i>')
                             //Bold to html bold
-                            .replace(/\*\*(.*?)\*\*/g, '<b>$1</b>')
+                            .replace(/\*\*(.*?)\*\*/g, '<p class="bold">$1</p>')
                             //Italic to html italic
                             .replace(/\*(.*?)\*/g, '<i>$1</i>')
                             //Code to html code
                             .replace(/`(.*?)`/g, '<code>$1</code>');
-                        th.page = defineComponent({template: `<div class="projectPage"><h2>${projectName}</h2><img class="projectImg" alt="Main project image" src="/projects/${projectName}.png"/><p class="text">${transformedText}</p></div>`});
+                        th.page = defineComponent({template: `<div class="projectPage"> <h2>${projectName}</h2> <img class="projectImg" alt="Main project image" src="/projects/${projectName}.png" /> <p class="text">${transformedText}</p> </div>`});
                     });
             }
         }

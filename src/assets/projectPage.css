@@ -14,9 +14,14 @@
     margin: 2rem;
     color: var(--color-heading);
 }
+.projectPage a {
+    text-decoration: underline;
+    color: var(--color-text);
+}
 .projectPage a:hover {
     color: var(--color-text-hover);
 }
-.projectPage b {
+.bold {
     font-weight: bold;
+    display: inline;
 }
