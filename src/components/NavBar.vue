@@ -37,6 +37,7 @@ export default defineComponent({
 
 <style>
 #navAll {
+    position: relative;
     width: 100%;
     height: 100%;
     background-color: var(--color-background-soft);
@@ -61,9 +62,9 @@ export default defineComponent({
 }
 .nav a {
     min-width: 15%;
-    height: 100%;
+    max-height: 100%;
     align-items: center;
     font-size: 1.25rem;
-    border: 2px solid var(--color-border);
+    border-left: 2px solid var(--color-border);
 }
 </style>

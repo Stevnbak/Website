@@ -9,16 +9,18 @@ h2 {
     font-size: 5rem;
     font-weight: 400;
     color: var(--color-heading);
+    margin: 1rem;
 }
 h3 {
     font-size: 2rem;
     font-weight: 400;
     color: var(--color-heading);
     text-align: center;
+    margin: 0.5rem;
 }
 img {
     width: 50%;
-    max-height: 60vh;
+    max-height: 50vh;
     object-fit: contain;
 }
 </style>
