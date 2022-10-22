@@ -1,0 +1,24 @@
+School;Game;C#;Processing
+The different programming projects I've made in school.
+
+|DDU Games|
+DDU or Digital Design and Development is a class I have in school which has a focus on game development. 
+It is mostly targeted towards beginners and the games is therefore quite simple.
+
+**Games made:**
+- [DDU Game 1](https://github.com/Stevnbak/DDU-Spil-September)
+    This was the first, and currently only game, I've made in DDU. It is a simple platformer where you have to hunt invasive species. It was made in a team of 3 and includes saving and loading saves and progress along with the gameplay.
+    It was developed using Processing, based on Java, and using SQLite for the database.
+
+|Programmering C|
+This is a class I have in school which is focused on programming in C#. It is also targeted towards beginners and the projects are therefore also quite simple.
+
+**Projects made:**
+- [Ticket System](https://github.com/Stevnbak/ProgC-CinemaTicketSystem)
+    This is a simple ticket system for a cinema. It was made by me alone as a Console App in C#.
+
+
+|Rubik's Cube Solver|
+This is a program i made in relation to a big written assignment in the subjects math and programming about how to solve a Rubik's Cube with the fewest rotations possible.
+The written assignment was written in danish, but the code is commented in english and made using C#.
+The program can be found here: [GitHub](https://github.com/Stevnbak/RubiksCubeSolver)

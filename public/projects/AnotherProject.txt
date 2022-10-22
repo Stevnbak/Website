@@ -1,4 +1,0 @@
-TCF;Other
-This is a test project page and description.
-
-This is the ***full*** description of *the project* and `everything that is needed` to [**know**](https://stevnbak.dk) about it.

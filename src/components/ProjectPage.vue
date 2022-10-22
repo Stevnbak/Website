@@ -48,7 +48,9 @@ export default defineComponent({
                             //Italic to html italic
                             .replace(/\*(.*?)\*/g, '<i>$1</i>')
                             //Code to html code
-                            .replace(/`(.*?)`/g, '<code>$1</code>');
+                            .replace(/`(.*?)`/g, '<code>$1</code>')
+                            //Headers
+                            .replace(/\|(.*?)\|/g, '<h3>$1</h3>');
                         th.page = defineComponent({template: `<div class="projectPage"> <h2>${projectName}</h2> <img class="projectImg" alt="Main project image" src="/projects/${projectName}.png" /> <p class="text">${transformedText}</p> </div>`});
                     });
             }

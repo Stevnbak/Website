@@ -1,0 +1,22 @@
+Web;TCF;Team;Vue;Typescript
+The Cycle: Frontier Applications is a website with many different application relating to The Cycle Frontier.
+
+The website can be found here: [apps.thecyclefrontier.wiki](https://apps.thecyclefrontier.wiki).
+It includes many different applications relating to sharing information about The Cycle Frontier.
+It was made by The Cycle Frontier Wiki team which I am a part of, and developed using **vue** and vite and written in typescript.
+The project is open source and the code can be found and contributed to here: [github.com/TCF-Wiki/TCF-Apps](https://github.com/TCF-Wiki/TCF-Apps)
+
+All the data on the site is datamined directly from the game files and updated each time the game is updated. The data is publicly available on Github here: [github.com/TCF-Wiki/TCF-Information](https://github.com/TCF-Wiki/TCF-Information)
+
+|The applications available on the website is:|
+- [**Interactive map**](https://apps.thecyclefrontier.wiki/map)
+    An interactive map for all maps in the game and every loot spawn point and quest item locations, made using leaflet.js.
+- [**Weapon calculator**](https://apps.thecyclefrontier.wiki/calc)
+    A calculator for all weapons in the game, with all stats and damage calculations against all types of armors.
+- [**Forge simulator**](https://apps.thecyclefrontier.wiki/forge)
+    A simulator for [the forge](https://thecyclefrontier.wiki/wiki/The_Forge), with all recipes and all possible outcomes and perks.
+- [**Loadout generator**](https://apps.thecyclefrontier.wiki/loadout)
+    A random generator to give a completely random loadout of in game ~gear and weapons.
+
+
+*[The Cycle: Frontier](https://thecycle.game) is a free-to-play, open-world, post-apocalyptic, survival game set in a world where the sun has stopped shining. The game is being developed by [YAGER](https://yager.de).*

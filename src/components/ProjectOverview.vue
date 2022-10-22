@@ -38,7 +38,6 @@ export default defineComponent({
     },
     methods: {
         refreshHash: function () {
-            console.log(this.categories);
             var hash = window.location.hash.replace('#', '');
             if (hash == 'All' || hash == '') {
                 this.projects.forEach((project) => {
@@ -46,7 +45,6 @@ export default defineComponent({
                 });
             } else {
                 this.projects.forEach((project) => {
-                    console.log(project.categories);
                     if (project.categories.includes(hash)) {
                         project.hidden = false;
                     } else {
@@ -69,12 +67,12 @@ export default defineComponent({
         //Load projects
         for (var i = 0; i < projectFiles.length; i++) {
             var name = projectFiles[i];
-            await fetch('/projects/' + name)
+            await fetch('/projects/' + name + '.txt')
                 .then((response) => response.text())
                 .then((text) => {
                     var lines = text.split('\n');
                     var project: Project = {
-                        title: name.replace('.txt', ''),
+                        title: name,
                         description: lines[1],
                         categories: lines[0].replace('\r', '').split(';'),
                         hidden: false,
@@ -138,10 +136,9 @@ h2 {
 
 .project img {
     position: relative;
-    height: 60%;
+    height: 50%;
     object-fit: contain;
     border-radius: 1rem;
-    margin-bottom: 1rem;
 }
 
 .project h3 {
