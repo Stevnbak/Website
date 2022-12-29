@@ -1,6 +1,6 @@
 <template>
     <h2>Kasper Stevnbak</h2>
-    <img src="zebra-kasper.jpg" alt="Zebra image" />
+    <img src="/zebra-kasper.jpg" alt="Zebra image" />
     <h3 id="overviewHeading">Project overview</h3>
     <div class="categoryList select">
         <a v-for:="category in categories" :href="'#' + category">{{ category }}</a>

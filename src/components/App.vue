@@ -8,7 +8,7 @@ import {defineComponent} from 'vue';
 import ProjectOverview from './ProjectOverview.vue';
 import NotFound from './404.vue';
 
-export default {
+export default defineComponent({
     data: function () {
         return {
             currentPath: window.location.pathname,
@@ -58,13 +58,8 @@ export default {
     },
     mounted() {
         this.setPage();
-        window.addEventListener('popstate', this.setPage);
-        window.addEventListener('pushstate', this.setPage);
-        window.addEventListener('replacestate', this.setPage);
-        window.addEventListener('hashchange', this.setPage);
-        window.addEventListener('load', this.setPage);
     },
-};
+});
 </script>
 
 <style scoped>
