@@ -1,4 +1,4 @@
-Game;Unity;Solo;C#
+Game;Unity
 Singleplayer game set in a randomly generated maze, with enemies and powerups.
 
 **Gameplay**

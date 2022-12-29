@@ -1,4 +1,4 @@
-Web;Solo;Javascript;Html;CSS
+Web
 A danish version of the web game Wordle.
 
 A simple game where you have to guess the word by looking at the letters, but in danish instead of english. 

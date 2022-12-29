@@ -8,7 +8,7 @@ import {faStopwatch, faMap, faLocationPin, faClock, faRuler, faStar, faHashtag, 
 import {faTwitter, faFacebook, faDiscord, faInstagram, faGithub} from '@fortawesome/free-brands-svg-icons';
 library.add(faTwitter, faFacebook, faDiscord, faInstagram, faGithub, faStopwatch, faMap, faLocationPin, faClock, faRuler, faStar, faHashtag, faArrowDown19, faHourglass);
 
-import Router from './components/Router.vue';
+import Router from './components/App.vue';
 const app = createApp(Router);
 app.mount('main');
 

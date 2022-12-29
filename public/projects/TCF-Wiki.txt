@@ -1,4 +1,4 @@
-Web;TCF;Team
+Web;TCF
 The official community wiki for The Cycle: Frontier made with Mediawiki.
 
 [https://thecyclefrontier.wiki](https://thecyclefrontier.wiki)

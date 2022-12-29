@@ -1,4 +1,4 @@
-Web;TCF;Team;Vue;Typescript
+Web;TCF;Vue
 The Cycle: Frontier Applications is a website with many different application relating to The Cycle Frontier.
 
 The website can be found here: [apps.thecyclefrontier.wiki](https://apps.thecyclefrontier.wiki).

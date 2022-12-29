@@ -2,12 +2,8 @@
     <div class="horizontal spread" id="navAll">
         <a class="logo horizontal" href="/">
             <img id="logo" src="/logo.png" alt="Logo Icon" />
-            <h1>Stevnbak</h1>
+            <h1>Kasper Stevnbak</h1>
         </a>
-        <div class="horizontal right nav">
-            <a class="center hover" href="/">Home</a>
-            <a class="center hover" href="/Projects">Projects</a>
-        </div>
     </div>
 </template>
 
@@ -40,18 +36,14 @@ export default defineComponent({
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: var(--color-background-soft);
-    border: 2px solid var(--color-border);
+    background-color: var(--color-border);
 }
 .logo {
-    width: 15%;
+    width: 100%;
     align-items: center;
     margin-left: 1rem;
-    color: var(--color-heading);
+    color: var(--color-text);
     text-decoration: none;
-}
-.logo:hover {
-    background-color: #ffffff00;
 }
 .logo img {
     width: 5rem;

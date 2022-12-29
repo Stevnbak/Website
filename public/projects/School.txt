@@ -1,4 +1,4 @@
-School;Game;C#;Processing
+School;Game;Web
 The different programming projects I've made in school.
 
 |DDU Games|

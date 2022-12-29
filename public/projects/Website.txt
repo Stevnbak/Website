@@ -1,4 +1,4 @@
-Web;Solo;Vue;Typescript
+Web;Vue
 The website you are currently on.
 
 This website is a collection of all of my projects.
