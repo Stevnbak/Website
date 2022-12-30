@@ -2,11 +2,11 @@
 
 /* color palette from <https://color.adobe.com/mythemes> theme: stevnbak.dk */
 :root {
-    --color1: #161114;
-    --color2: #401112;
-    --color3: #7f2123;
-    --color4: #bf3235;
-    --color5: #b29e9c;
+    --color1: #292929;
+    --color2: #686868;
+    --color3: #8a8a8a;
+    --color4: #c3c3c3;
+    --color5: #ffffff;
 }
 
 /* semantic color variables for this project */

@@ -1,9 +1,0 @@
-TCF;Web;Multiplayer;Vue;NodeJs
-Geoguessr for The Cycle: Frontier with over 700 locations and multiplayer up to 10 people.
-
-The website can be found here: [fortunaguessr.com](https://fortunaguessr.com).
-Fortunaguessr is a geoguessr game specifically for The Cycle: Frontier maps. It is not affiliated with the real Geoguessr but just inspired from that game.
-The game can be played solo or with up to 10 people in multiplayer competing against each other.
-This site was developed by me and a friend using vue and vite with typescript and a backend allowing multiplayer made in javascript using nodeJs.
-
-*[The Cycle: Frontier](https://thecycle.game) is a free-to-play, open-world, post-apocalyptic, survival game set in a world where the sun has stopped shining. The game is being developed by [YAGER](https://yager.de).*

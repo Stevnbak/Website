@@ -10,12 +10,4 @@ library.add(faTwitter, faFacebook, faDiscord, faInstagram, faGithub, faStopwatch
 
 import Router from './components/App.vue';
 const app = createApp(Router);
-app.mount('main');
-
-import NavBar from './components/NavBar.vue';
-const nav = createApp(NavBar);
-nav.mount('nav');
-
-import Footer from './components/Footer.vue';
-const foot = createApp(Footer).component('font-awesome-icon', FontAwesomeIcon);
-foot.mount('footer');
+app.mount('body');

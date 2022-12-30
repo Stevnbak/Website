@@ -1,79 +1,58 @@
 <template>
-    <component :is="pageComponent" />
+    <h1>Stevnbak</h1>
+    <nav>
+        <a href="https://kasper.stevnbak.dk">
+            <h2>Kasper</h2>
+            <img src="/kasper-logo.png" alt="Kasper Image" />
+        </a>
+    </nav>
 </template>
 
-<script lang="ts">
-import {defineComponent} from 'vue';
-
-import ProjectOverview from './ProjectOverview.vue';
-import NotFound from './404.vue';
-
-export default defineComponent({
-    data: function () {
-        return {
-            currentPath: window.location.pathname,
-            pageComponent: defineComponent({template: ``}),
-        };
-    },
-    methods: {
-        setPage(): any {
-            this.currentPath = window.location.pathname;
-            if (this.currentPath == '/') {
-                document.title = 'Kasper Stevnbak';
-                /*@ts-ignore*/
-                this.pageComponent = ProjectOverview;
-            } else {
-                var projectName = this.currentPath.split('/')[2];
-                document.title = 'Kasper Stevnbak - ' + projectName;
-                fetch('/projects/' + projectName + '.txt')
-                    .then((response) => response.text())
-                    .then((text) => {
-                        var categories = text.split(/\r?\n/g)[0].split(';');
-                        var transformedText = text
-                            //Remove category text
-                            .replace(categories.join(';') + '\r\n', '')
-                            //New line to html line break
-                            .replace(/\r?\n/g, '<br />')
-                            //Link to html link
-                            .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2">$1</a>')
-                            //Bold&Italic to html bold&italic
-                            .replace(/\*\*\*(.*?)\*\*\*/g, '<i> <p class="bold">$1</p> </i>')
-                            //Bold to html bold
-                            .replace(/\*\*(.*?)\*\*/g, '<p class="bold">$1</p>')
-                            //Italic to html italic
-                            .replace(/\*(.*?)\*/g, '<i>$1</i>')
-                            //Code to html code
-                            .replace(/`(.*?)`/g, '<code>$1</code>')
-                            //Headers
-                            .replace(/\|(.*?)\|/g, '<h3>$1</h3>');
-                        this.pageComponent = defineComponent({
-                            template: `<div class="projectPage"> <h2>${projectName}</h2> <img class="projectImg" alt="Main project image" src="/projects/${projectName}.png" /> <p class="text">${transformedText}</p> </div>`,
-                        });
-                    })
-                    .catch(() => {
-                        this.pageComponent = NotFound;
-                    });
-            }
-        },
-    },
-    mounted() {
-        this.setPage();
-    },
-});
-</script>
-
 <style scoped>
+h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 2rem 0;
+    color: var(--color-heading);
+}
 nav {
+    margin-top: 5rem;
     width: 100%;
-    min-height: 10%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-direction: row;
 }
 nav a {
-    height: 100%;
-    width: 100%;
+    margin: 1rem;
+    width: 20rem;
+    height: 25rem;
+    padding: 1.5rem;
+    background-color: var(--color-background-soft);
+    border-radius: 1rem;
+    border: 0.25rem solid var(--color-border);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    text-decoration: none;
+}
+nav a:hover {
+    border-color: var(--color-border-hover);
+    background-color: var(--color-border);
+}
+nav a img {
+    width: 85%;
+    object-fit: contain;
+}
+nav a h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 1rem 0;
+    color: var(--color-text);
 }
 </style>
