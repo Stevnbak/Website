@@ -2,4 +2,4 @@ Web;Vue
 The website you are currently on.
 
 This website is a collection of all of my projects.
-It is built with Vue and Typescript, and each project page is automatically loaded based on a text file to easily add more projects without having to edit the site itself every time.
+It is built with Vue and Typescript, and each project page is automatically loaded based on a text file to easily add more projects without having to edit the website code itself every time.

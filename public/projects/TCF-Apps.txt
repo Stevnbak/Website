@@ -11,10 +11,12 @@ All the data on the site is datamined directly from the game files and updated e
 |The applications available on the website is:|
 - [**Interactive map**](https://apps.thecyclefrontier.wiki/map)
     An interactive map for all maps in the game and every loot spawn point and quest item locations, made using leaflet.js.
-- [**Weapon calculator**](https://apps.thecyclefrontier.wiki/calc)
+- [**Weapon calculator**](https://apps.thecyclefrontier.wiki/calculator)
     A calculator for all weapons in the game, with all stats and damage calculations against all types of armors.
 - [**Forge simulator**](https://apps.thecyclefrontier.wiki/forge)
     A simulator for [the forge](https://thecyclefrontier.wiki/wiki/The_Forge), with all recipes and all possible outcomes and perks.
+- [**Progress tracker**](https://apps.thecyclefrontier.wiki/progress)
+    A progress tracker for all quests and upgrades in the game.
 - [**Loadout generator**](https://apps.thecyclefrontier.wiki/loadout)
     A random generator to give a completely random loadout of in game ~gear and weapons.
 

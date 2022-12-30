@@ -53,39 +53,50 @@ export default defineComponent({
                 });
             }
         },
-    },
-    async mounted() {
-        this.categories.push('All');
-        //Load project list
-        var projectFiles = [] as string[];
-        await fetch('/projects/list.json')
-            .then((response) => response.json())
-            .then(async (json) => {
-                projectFiles = json;
-            });
+        loadProjects: async function () {
+            //Create arrays
+            let categories = ['All'] as string[];
+            let projects = [] as Project[];
 
-        //Load projects
-        for (var i = 0; i < projectFiles.length; i++) {
-            var name = projectFiles[i];
-            await fetch('/projects/' + name + '.txt')
-                .then((response) => response.text())
-                .then((text) => {
-                    var lines = text.split('\n');
-                    var project: Project = {
-                        title: name,
-                        description: lines[1],
-                        categories: lines[0].replace('\r', '').split(';'),
-                        hidden: false,
-                    };
-                    project.categories.forEach((category) => {
-                        if (!this.categories.includes(category)) {
-                            this.categories.push(category);
-                        }
-                    });
-                    this.projects.push(project);
+            //Load project list
+            var projectFiles = [] as string[];
+            await fetch('/projects/list.json')
+                .then((response) => response.json())
+                .then(async (json) => {
+                    projectFiles = json;
                 });
-        }
 
+            //Load projects
+            for (var i = 0; i < projectFiles.length; i++) {
+                var name = projectFiles[i];
+                await fetch('/projects/' + name + '.txt')
+                    .then((response) => response.text())
+                    .then((text) => {
+                        var lines = text.split('\n');
+                        var project: Project = {
+                            title: name,
+                            description: lines[1],
+                            categories: lines[0].replace('\r', '').split(';'),
+                            hidden: false,
+                        };
+                        project.categories.forEach((category) => {
+                            if (!categories.includes(category)) {
+                                categories.push(category);
+                            }
+                        });
+                        projects.push(project);
+                    });
+            }
+            //Set data
+            this.projects = projects;
+            this.categories = categories;
+        },
+    },
+    created() {
+        this.loadProjects();
+    },
+    mounted() {
+        this.loadProjects();
         //Filter for categories
         this.refreshHash();
         window.addEventListener('hashchange', () => {
@@ -133,14 +144,14 @@ h3 {
     padding: 1.5rem;
     background-color: var(--color-background-soft);
     border-radius: 1rem;
-    border: 2px solid var(--color-border);
+    border: 0.25rem solid var(--color-border);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 .project:hover {
-    border: 2px solid var(--color-border-hover);
+    border-color: var(--color-border-hover);
 }
 .hidden {
     display: none;

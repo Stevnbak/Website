@@ -1,14 +1,18 @@
 School;Game;Web
 The different programming projects I've made in school.
 
-|DDU Games|
-DDU or Digital Design and Development is a class I have in school which has a focus on game development. 
-It is mostly targeted towards beginners and the games is therefore quite simple.
+|DDU|
+DDU or Digital Design and Development is a class I have in school. 
+It is mostly targeted towards beginners and the projects are therefore quite simple.
 
 **Games made:**
 - [DDU Game 1](https://github.com/Stevnbak/DDU-Spil-September)
     This was the first, and currently only game, I've made in DDU. It is a simple platformer where you have to hunt invasive species. It was made in a team of 3 and includes saving and loading saves and progress along with the gameplay.
     It was developed using Processing, based on Java, and using SQLite for the database.
+- [DDU School Test IT-System](https://github.com/DDU-FKMO/DDU-Mini-Projekt)
+    This is a website and database for a school test system. It was made in a team of 4 and includes a login system, a database for storing the test results and a website for the teachers to see the results and students for completing the tests. 
+    The website can be found here: [test.stevnbak.dk/](https://test.stevnbak.dk/)
+
 
 |Programmering C|
 This is a class I have in school which is focused on programming in C#. It is also targeted towards beginners and the projects are therefore also quite simple.
