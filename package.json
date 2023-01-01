@@ -19,6 +19,7 @@
     "install": "^0.13.0",
     "npm": "^8.18.0",
     "vue": "^3.2.37",
+    "vue-gtag": "^2.0.1",
     "vue-router": "^4.1.5"
   },
   "devDependencies": {

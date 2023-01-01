@@ -1,4 +1,5 @@
 import {createApp} from 'vue';
+import VueGtag from 'vue-gtag';
 import './assets/main.css';
 
 /*Icons*/
@@ -10,6 +11,11 @@ library.add(faTwitter, faFacebook, faDiscord, faInstagram, faGithub, faStopwatch
 
 import Router from './components/App.vue';
 const app = createApp(Router);
+app.use(VueGtag, {
+    config: {id: 'G-QK5NFEFDJ7'},
+    enabled: false,
+});
+app.provide('gtag', app.config.globalProperties.$gtag);
 app.mount('main');
 
 import NavBar from './components/NavBar.vue';
