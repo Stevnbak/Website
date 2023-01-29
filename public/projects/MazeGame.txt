@@ -1,11 +1,3 @@
 Game;Unity
 Singleplayer game set in a randomly generated maze, with enemies and powerups.
-
-**Gameplay**
-You spawn in a randomly generated maze and have to do some different things (killing enemies, finding objects and protecting "machines") after that go to the center and interact with the button to complete that "match".
-
-**Development**
-The game was developed in Unity using C#. There is a lot of things I would have liked to add to the game at some point, like multiplayer, but I lost motivation before getting to that.
-
-**Link**
-[https://github.com/Stevnbak/MazeGame/releases](https://github.com/Stevnbak/MazeGame/releases)
+link:https://github.com/Stevnbak/MazeGame/

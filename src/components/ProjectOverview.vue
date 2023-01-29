@@ -7,7 +7,7 @@
     </div>
     <br />
     <div class="projects">
-        <a v-for:="project in projects" :class="project.hidden ? 'hidden' : ''" class="project" :href="'/Projects/' + project.title">
+        <a v-for:="project in projects" :class="project.hidden ? 'hidden' : ''" class="project" :href="project.link">
             <h3>{{ project.title }}</h3>
             <div class="categoryList">
                 <a v-for:="category in project.categories" :href="'#' + category">{{ category }}</a>
@@ -24,6 +24,7 @@ type Project = {
     title: string;
     description: string;
     categories: string[];
+    link: string;
     hidden: boolean;
 };
 //Vue component
@@ -73,10 +74,17 @@ export default defineComponent({
                     .then((response) => response.text())
                     .then((text) => {
                         var lines = text.split('\n');
+                        var link = lines[2];
+                        if(link.includes("link:")) {
+                            link = link.replace("link:", "");
+                        } else {
+                            link = "/Projects/" + name;
+                        }
                         var project: Project = {
                             title: name,
                             description: lines[1],
                             categories: lines[0].replace('\r', '').split(';'),
+                            link: link,
                             hidden: false,
                         };
                         project.categories.forEach((category) => {
