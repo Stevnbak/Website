@@ -8,11 +8,11 @@
     <br />
     <div class="projects">
         <a v-for:="project in projects" :class="project.hidden ? 'hidden' : ''" class="project" :href="project.link">
-            <h3>{{ project.title }}</h3>
+            <h3>{{ project.title.replaceAll('_',' ') }}</h3>
             <div class="categoryList">
                 <a v-for:="category in project.categories" :href="'#' + category">{{ category }}</a>
             </div>
-            <img :src="'/projects/' + project.title + '.png'" :alt="project.title + ' image'" />
+            <img :src="'/projects/' + project.title + '.png'" :alt="project.title.replaceAll('_',' ') + ' image'" />
             <p>{{ project.description }}</p>
         </a>
     </div>
@@ -53,6 +53,7 @@ export default defineComponent({
                     }
                 });
             }
+            this.$forceUpdate();
         },
         loadProjects: async function () {
             //Create arrays
@@ -98,6 +99,9 @@ export default defineComponent({
             //Set data
             this.projects = projects;
             this.categories = categories;
+
+            //Refresh Hash
+            this.refreshHash();
         },
     },
     created() {
@@ -105,8 +109,6 @@ export default defineComponent({
     },
     mounted() {
         this.loadProjects();
-        //Filter for categories
-        this.refreshHash();
         window.addEventListener('hashchange', () => {
             this.refreshHash();
         });
