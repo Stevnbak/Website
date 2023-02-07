@@ -2,5 +2,5 @@ Discord;NodeJs
 A fun annoying discord bot.
 
 Stevnbot is an annoying but also fun discord bot with weird chat replies and functions made mostly to annoy my friends. It is currently in 18 discord servers.
-The bot was made in javascript using nodejs and the discord.js module, but is not using any of the discord application integration except reading text messages.
+The bot was made in javascript using nodejs and the discord.js module.
 It can be added to any discord server using this link: [Invite](https://discord.com/api/oauth2/authorize?client_id=453940369571315718&permissions=275213577280&scope=bot)

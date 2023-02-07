@@ -1,0 +1,3 @@
+Web;TCF
+The official community wiki for The Cycle: Frontier made with Mediawiki.
+link:https://thecyclefrontier.wiki

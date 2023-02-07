@@ -1,17 +1,20 @@
-School;Game;Web
-The different programming projects I've made in school.
+School;Game;Web;Vue;NodeJs
+The different programming projects I've made during my time in upper secondary highschool (Danish HTX).
 
 |DDU|
 DDU or Digital Design and Development is a class I have in school. 
 It is mostly targeted towards beginners and the projects are therefore quite simple.
 
 **Games made:**
-- [DDU Game 1](https://github.com/Stevnbak/DDU-Spil-September)
+- [DDU 2D Game](https://github.com/Stevnbak/DDU-Spil-September)
     This was the first, and currently only game, I've made in DDU. It is a simple platformer where you have to hunt invasive species. It was made in a team of 3 and includes saving and loading saves and progress along with the gameplay.
-    It was developed using Processing, based on Java, and using SQLite for the database.
+    It was developed using the Processing language, which is based on Java, and using SQLite for the database.
 - [DDU School Test IT-System](https://github.com/DDU-FKMO/DDU-Mini-Projekt)
     This is a website and database for a school test system. It was made in a team of 4 and includes a login system, a database for storing the test results and a website for the teachers to see the results and students for completing the tests. 
     The website can be found here: [test.stevnbak.dk/](https://test.stevnbak.dk/)
+- [DDU Machine Learning](https://github.com/DDU-FKMO/Racerbil_MachineLearning)
+    This is an application to try and use neural networks and genetic algorithms to achieve machine learning with racing cars going around a track. 
+    It was also developed using the Processing language and in a group of 2.
 
 
 |Programmering C|
@@ -20,9 +23,10 @@ This is a class I have in school which is focused on programming in C#. It is al
 **Projects made:**
 - [Ticket System](https://github.com/Stevnbak/ProgC-CinemaTicketSystem)
     This is a simple ticket system for a cinema. It was made by me alone as a Console App in C#.
-
+- [Quiz Website](https://github.com/Stevnbak/ProgC-BlazorQuiz)
+    This is a simple website to take a quiz, it uses an [API](https://opentdb.com/) to retrieve questions and answers, which allows the user to try many categories and get many different questions each time.
 
 |Rubik's Cube Solver|
 This is a program i made in relation to a big written assignment in the subjects math and programming about how to solve a Rubik's Cube with the fewest rotations possible.
 The written assignment was written in danish, but the code is commented in english and made using C#.
-The program can be found here: [GitHub](https://github.com/Stevnbak/RubiksCubeSolver)
+The program source code can be found here: [GitHub](https://github.com/Stevnbak/RubiksCubeSolver)
