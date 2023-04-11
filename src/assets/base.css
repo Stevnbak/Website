@@ -1,32 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Secular+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Secular+One&display=swap");
 
 /* color palette from <https://color.adobe.com/mythemes> theme: stevnbak.dk */
 :root {
-    --color1: #161114;
-    --color2: #401112;
-    --color3: #7f2123;
-    --color4: #bf3235;
-    --color5: #b29e9c;
+	--color1: #161114;
+	--color2: #401112;
+	--color3: #7f2123;
+	--color4: #bf3235;
+	--color5: #b29e9c;
 }
 
 /* semantic color variables for this project */
 :root {
-    --color-background: var(--color1);
-    --color-background-soft: var(--color2);
+	--color-background: var(--color1);
+	--color-background-soft: var(--color2);
 
-    --color-border: var(--color3);
-    --color-border-hover: var(--color4);
+	--color-border: var(--color3);
+	--color-border-hover: var(--color4);
 
-    --color-heading: var(--color4);
-    --color-text: var(--color5);
-    --color-text-hover: var(--color3);
+	--color-heading: var(--color4);
+	--color-text: var(--color5);
+	--color-text-hover: var(--color3);
 }
 
 body {
-    color: var(--color-text);
-    background: var(--color-background);
-    font-family: 'Secular One', sans-serif;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	color: var(--color-text);
+	background: var(--color-background);
+	font-family: "Secular One", sans-serif;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
