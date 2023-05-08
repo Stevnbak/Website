@@ -4,6 +4,7 @@ The different programming projects I've made during my time in upper secondary h
 |DDU|
 DDU or Digital Design and Development is a class I have in school. 
 It is mostly targeted towards beginners and the projects are therefore quite simple.
+All of these projects were made in a group.
 
 **Games made:**
 - [DDU 2D Game](https://github.com/Stevnbak/DDU-Spil-September)
@@ -11,20 +12,28 @@ It is mostly targeted towards beginners and the projects are therefore quite sim
     It was developed using the Processing language, which is based on Java, and using SQLite for the database.
 - [DDU School Test IT-System](https://github.com/DDU-FKMO/DDU-Mini-Projekt)
     This is a website and database for a school test system. It was made in a team of 4 and includes a login system, a database for storing the test results and a website for the teachers to see the results and students for completing the tests. 
-    The website can be found here: [test.stevnbak.dk/](https://test.stevnbak.dk/)
+    The website can no longer be accessed online, but the code is still available on [GitHub](https://github.com/DDU-FKMO/DDU-Mini-Projekt)
 - [DDU Machine Learning](https://github.com/DDU-FKMO/Racerbil_MachineLearning)
     This is an application to try and use neural networks and genetic algorithms to achieve machine learning with racing cars going around a track. 
     It was also developed using the Processing language and in a group of 2.
+- [DDU Training Tracker](https://github.com/DDU-FKMO/DDU-Eksamensprojekt)
+    This is an application for tracking exercises and has training programs, logging sessions, statistics, unlocks, level, achievements.
+    The website was made using Nodejs, Vue and MongoDB.
+    The website can be accessed by going to [test.stevnbak.dk](https://test.stevnbak.dk/)
+    This was our final project and also the biggest one in this class, and was made in a group of 4.
 
 
 |Programmering C|
-This is a class I have in school which is focused on programming in C#. It is also targeted towards beginners and the projects are therefore also quite simple.
+This is a class I have in school which is focused on programming in C#. It is also targeted towards beginners and the projects are therefore also quite simple. 
+All of these projects were made by me alone.
 
 **Projects made:**
 - [Ticket System](https://github.com/Stevnbak/ProgC-CinemaTicketSystem)
     This is a simple ticket system for a cinema. It was made by me alone as a Console App in C#.
 - [Quiz Website](https://github.com/Stevnbak/ProgC-BlazorQuiz)
     This is a simple website to take a quiz, it uses an [API](https://opentdb.com/) to retrieve questions and answers, which allows the user to try many categories and get many different questions each time.
+- [Carcassonne](https://github.com/Stevnbak/ProgC-Carcassonne)
+    This is a website made in Blazor using C# as my final project for the class. It is a web version of the board game "Carcassonne".
 
 |Rubik's Cube Solver|
 This is a program i made in relation to a big written assignment in the subjects math and programming about how to solve a Rubik's Cube with the fewest rotations possible.
