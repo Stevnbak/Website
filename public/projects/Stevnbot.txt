@@ -1,4 +1,4 @@
-Discord;NodeJs
+Discord
 A fun annoying discord bot.
 
 Stevnbot is an annoying but also fun discord bot with weird chat replies and functions made mostly to annoy my friends. It is currently in 18 discord servers.

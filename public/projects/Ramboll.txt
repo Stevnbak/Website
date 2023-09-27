@@ -1,12 +1,10 @@
-Office;Bentley
+Work
 Student Assistent at Ramboll from November 2021 to now
 
 My job at [Ramboll](https://ramboll.com/) is officially as a Student Assistent, my responsibilities and tasks has mostly consisted of coding various macros and addons to CAD and Office applications used by the engineers.
 Some of these programs are:
-- 3D sign tool
-    An addin for Bentley OpenRoads Designer, that automatically transforms 2D signs placed with the CoWi Vejudstyr program to 3D signs with the correct stand, rotation, height and size.
-- CO2 footprint
-    A VBA macro for Bentley Microstation and OpenRoads Designer that runs in the background and adds the Carbon footprint of all elements drawn in the file.
+- 3D sign & line tool
+    An addin for Bentley OpenRoads Designer, that automatically transforms 2D signs, lines and symbols placed with the CoWi Vejudstyr program to 3D signs with the correct models, stands, rotations, heights and sizes.
 - Excel automations
     Various automations for big spreadsheets of data that needs to be moved or changed in some way.
 - Microstation VBA macros

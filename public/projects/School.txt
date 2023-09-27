@@ -1,4 +1,4 @@
-School;Game;Web;Vue;NodeJs
+School;Game;Web;Vue
 The different programming projects I've made during my time in upper secondary highschool (Danish HTX).
 
 |DDU|
@@ -19,7 +19,7 @@ All of these projects were made in a group.
 - [DDU Training Tracker](https://github.com/DDU-FKMO/DDU-Eksamensprojekt)
     This is an application for tracking exercises and has training programs, logging sessions, statistics, unlocks, level, achievements.
     The website was made using Nodejs, Vue and MongoDB.
-    The website can be accessed by going to [test.stevnbak.dk](https://test.stevnbak.dk/)
+    The website can no longer be accessed online, but the code is still available on [GitHub](https://github.com/DDU-FKMO/DDU-Eksamensprojekt)
     This was our final project and also the biggest one in this class, and was made in a group of 4.
 
 

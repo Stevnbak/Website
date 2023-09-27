@@ -1,5 +1,5 @@
 Web;Vue
-The website you are currently on.
+This website.
 
 This website is a collection of most of my projects.
 It is built with Vue and Typescript, and each individual project is automatically loaded based on a text file to easily add more projects without having to edit the website code itself.

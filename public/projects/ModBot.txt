@@ -1,4 +1,4 @@
-Discord;NodeJs
+Discord
 A discord moderation bot.
 
 The discord moderation bot I developed after being annoyed by one of the most popular moderation bots, Dyno.
