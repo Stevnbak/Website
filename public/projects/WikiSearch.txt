@@ -1,0 +1,3 @@
+Web;Vue
+Indie wiki search engine for finding independent wikis
+link:https://github.com/Stevnbak/WikiSearch

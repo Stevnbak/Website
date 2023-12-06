@@ -5,9 +5,9 @@ My job at [Ramboll](https://ramboll.com/) is officially as a Student Assistent, 
 Some of these programs are:
 - 3D sign & line tool
     An addin for Bentley OpenRoads Designer, that automatically transforms 2D signs, lines and symbols placed with the CoWi Vejudstyr program to 3D signs with the correct models, stands, rotations, heights and sizes.
+- Automating LER
+    Automating big parts of the process of handling recieved LER information to final drawings.
 - Excel automations
     Various automations for big spreadsheets of data that needs to be moved or changed in some way.
 - Microstation VBA macros
     Many different VBA macros ranging from transforming an arc to a linestring to extracting all elements of a colour to calculating the size of all shapes in the file.
-- Mass QR code creator
-    A program written in javascript to automatically create any amount of QR codes using a web api and saving the output image to the pc.

@@ -6,7 +6,7 @@ DDU or Digital Design and Development is a class I have in school.
 It is mostly targeted towards beginners and the projects are therefore quite simple.
 All of these projects were made in a group.
 
-**Games made:**
+**Projects made:**
 - [DDU 2D Game](https://github.com/Stevnbak/DDU-Spil-September)
     This was the first, and currently only game, I've made in DDU. It is a simple platformer where you have to hunt invasive species. It was made in a team of 3 and includes saving and loading saves and progress along with the gameplay.
     It was developed using the Processing language, which is based on Java, and using SQLite for the database.

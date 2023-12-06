@@ -3,8 +3,8 @@ A discord suggestion bot.
 
 The discord suggestion bot I developed when the one we previously used experienced a lot of trouble.
 It uses purely discord application interactions to simplify the creation of and voting on suggestions.
-It is currently in use in the official The Cycle Frontier discord server with more than 200k members.
-The bot was made in nodeJs using the discord.js module.
+It was used in the official The Cycle Frontier discord server with more than 200k members, until the game was shut down.
+The bot was made in NodeJs using the discord.js module.
 The bot can be added to any server by going here: [Invite](https://discord.com/api/oauth2/authorize?client_id=1096155944469143562&permissions=2147535872&scope=bot)
 
 The source code can be found on [GitHub](https://github.com/Stevnbak/SuggestionBot)
