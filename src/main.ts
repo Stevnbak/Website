@@ -10,7 +10,7 @@ import {faTwitter, faFacebook, faDiscord, faInstagram, faGithub} from '@fortawes
 library.add(faTwitter, faFacebook, faDiscord, faInstagram, faGithub, faStopwatch, faMap, faLocationPin, faClock, faRuler, faStar, faHashtag, faArrowDown19, faHourglass);
 
 import Router from './components/App.vue';
-const app = createApp(Router);
+const app = createApp(Router).component('font-awesome-icon', FontAwesomeIcon);
 app.use(VueGtag, {
     config: {id: 'G-QK5NFEFDJ7'},
     enabled: false,

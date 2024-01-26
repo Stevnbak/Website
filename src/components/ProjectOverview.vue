@@ -8,12 +8,15 @@
 	<br />
 	<div class="projects">
 		<a v-for:="project in projects" :class="project.hidden ? 'hidden' : ''" class="project" :href="project.link">
+			<div>
 			<h3>{{ project.title.replaceAll("_", " ") }}</h3>
-			<div class="categoryList">
-				<a v-for:="category in project.categories" :href="'#' + category">{{ category }}</a>
+				<div class="categoryList">
+					<a v-for:="category in project.categories" :href="'#' + category">{{ category }}</a>
+				</div>
 			</div>
 			<img :src="'/projects/' + project.title + '.png'" :alt="project.title.replaceAll('_', ' ') + ' image'" />
 			<p>{{ project.description }}</p>
+			<a class="github" :href="project.githubLink" v-if="project.githubLink" target="_blank"><font-awesome-icon icon="fa-brands fa-github" />GitHub</a>
 		</a>
 	</div>
 </template>
@@ -25,6 +28,7 @@
 		description: string;
 		categories: string[];
 		link: string;
+		githubLink?: string;
 		hidden: boolean;
 	};
 	//Vue component
@@ -59,7 +63,6 @@
 				//Create arrays
 				let categories = ["All"] as string[];
 				let projects = [] as Project[];
-
 				//Load project list
 				var projectFiles = [] as string[];
 				await fetch("/projects/list.json")
@@ -67,7 +70,6 @@
 					.then(async (json) => {
 						projectFiles = json;
 					});
-
 				//Load projects
 				for (var i = 0; i < projectFiles.length; i++) {
 					var name = projectFiles[i];
@@ -76,16 +78,20 @@
 						.then((text) => {
 							var lines = text.split("\n");
 							var link = lines[2];
-							if (link.includes("link:")) {
+							if (link.startsWith("link:")) {
 								link = link.replace("link:", "");
+							} else if (link.startsWith("github:")) {
+								link = link.replace("github:", "");
 							} else {
 								link = "/Projects/" + name;
 							}
+							var githubLink = lines.find((l) => l.startsWith("github:"))?.replace("github:", "");
 							var project: Project = {
 								title: name,
 								description: lines[1],
 								categories: lines[0].replace("\r", "").split(";"),
 								link: link,
+								githubLink: githubLink,
 								hidden: false
 							};
 							project.categories.forEach((category) => {
@@ -101,7 +107,6 @@
 				//Set data
 				this.projects = projects;
 				this.categories = categories;
-
 				//Refresh Hash
 				this.refreshHash();
 			}
@@ -127,7 +132,7 @@
 	}
 	img {
 		width: 30%;
-		max-height: 33vh;
+		max-height: 20rem;
 		object-fit: contain;
 	}
 	h3 {
@@ -161,8 +166,9 @@
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
+		overflow: hidden;
 	}
-	.project:hover {
+	.project:hover, .project .github:hover {
 		border-color: var(--color-border-hover);
 	}
 	.hidden {
@@ -178,7 +184,6 @@
 		border-radius: 1rem;
 		margin: 0;
 	}
-
 	.project h3 {
 		font-size: 2rem;
 		font-weight: 500;
@@ -186,6 +191,15 @@
 		text-align: center;
 		margin: 0;
 	}
+	.project .github {
+		border: 0.2rem solid var(--color-border);
+		border-radius: 0.5rem;
+		padding: 0.25rem 0.5rem;
+	}
+	.project .github svg {
+		padding-right: 10px;
+	}
+
 	.categoryList {
 		display: flex;
 		flex-wrap: wrap;
@@ -235,7 +249,7 @@
 		}
 		.project {
 			width: 15rem;
-			height: 25rem;
+			height: 30rem;
 		}
 	}
 </style>

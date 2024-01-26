@@ -8,3 +8,4 @@ The bot was made in NodeJs using the discord.js module.
 The bot can be added to any server by going here: [Invite](https://discord.com/api/oauth2/authorize?client_id=1096155944469143562&permissions=2147535872&scope=bot)
 
 The source code can be found on [GitHub](https://github.com/Stevnbak/SuggestionBot)
+github:https://github.com/Stevnbak/SuggestionBot

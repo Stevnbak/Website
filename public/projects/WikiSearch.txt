@@ -1,3 +1,4 @@
 Web;Vue
 Indie wiki search engine for finding independent wikis
-link:https://github.com/Stevnbak/WikiSearch
+link:https://wikisearch.stevnbak.dk
+github:https://github.com/Stevnbak/WikiSearch

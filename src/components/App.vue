@@ -45,7 +45,9 @@ export default defineComponent({
                             //Code to html code
                             .replace(/`(.*?)`/g, '<code>$1</code>')
                             //Headers
-                            .replace(/\|(.*?)\|/g, '<h3>$1</h3>');
+                            .replace(/\|(.*?)\|/g, '<h3>$1</h3>')
+                            //Remove github: link
+                            .replace(/(github:).*/gm, "");
                         this.pageComponent = defineComponent({
                             template: `<div class="projectPage"> <h2>${projectName}</h2> <img class="projectImg" alt="Main project image" src="/projects/${projectName}.png" /> <p class="text">${transformedText}</p> </div>`,
                         });
