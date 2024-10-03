@@ -81,7 +81,7 @@
 						link = "/Projects/" + name;
 						external = false;
 					}
-					var githubLink = lines.find((l) => l.startsWith("github:"))?.replace("github:", "");
+					var githubLink = lines.find((l: string) => l.startsWith("github:"))?.replace("github:", "");
 					var project: Project = {
 						title: name,
 						description: lines[1],
