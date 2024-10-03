@@ -7,7 +7,7 @@
 	</div>
 	<br />
 	<div class="projects">
-		<a v-for:="project in projects" :class="project.hidden ? 'hidden' : ''" class="project" :href="project.link">
+		<a v-for:="project in projects" :class="project.hidden ? 'hidden' : ''" class="project" :href="project.link" :target="project.externalLink ? '_blank' : ''">
 			<div>
 			<h3>{{ project.title.replaceAll("_", " ") }}</h3>
 				<div class="categoryList">
@@ -22,12 +22,15 @@
 </template>
 
 <script lang="ts">
+	import projectFiles from "../projects";
+
 	//Type
 	type Project = {
 		title: string;
 		description: string;
 		categories: string[];
 		link: string;
+		externalLink: boolean;
 		githubLink?: string;
 		hidden: boolean;
 	};
@@ -63,46 +66,39 @@
 				//Create arrays
 				let categories = ["All"] as string[];
 				let projects = [] as Project[];
-				//Load project list
-				var projectFiles = [] as string[];
-				await fetch("/projects/list.json")
-					.then((response) => response.json())
-					.then(async (json) => {
-						projectFiles = json;
-					});
 				//Load projects
-				for (var i = 0; i < projectFiles.length; i++) {
-					var name = projectFiles[i];
-					await fetch("/projects/" + name + ".txt")
-						.then((response) => response.text())
-						.then((text) => {
-							var lines = text.split("\n");
-							var link = lines[2];
-							if (link.startsWith("link:")) {
-								link = link.replace("link:", "");
-							} else if (link.startsWith("github:")) {
-								link = link.replace("github:", "");
-							} else {
-								link = "/Projects/" + name;
-							}
-							var githubLink = lines.find((l) => l.startsWith("github:"))?.replace("github:", "");
-							var project: Project = {
-								title: name,
-								description: lines[1],
-								categories: lines[0].replace("\r", "").split(";"),
-								link: link,
-								githubLink: githubLink,
-								hidden: false
-							};
-							project.categories.forEach((category) => {
-								if (!categories.includes(category)) {
-									categories.push(category);
-								}
-							});
-							projects.push(project);
-							//Refresh Hash
-							this.refreshHash();
-						});
+				for (let name in projectFiles) {
+					var lines = projectFiles[name as (keyof typeof projectFiles)].split("\n");
+					let external;
+					var link = lines[2];
+					if (link.startsWith("link:")) {
+						link = link.replace("link:", "");
+						external = true;
+					} else if (link.startsWith("github:")) {
+						link = link.replace("github:", "");
+						external = true;
+					} else {
+						link = "/Projects/" + name;
+						external = false;
+					}
+					var githubLink = lines.find((l) => l.startsWith("github:"))?.replace("github:", "");
+					var project: Project = {
+						title: name,
+						description: lines[1],
+						categories: lines[0].replace("\r", "").split(";"),
+						link: link,
+						externalLink: external,
+						githubLink: githubLink,
+						hidden: false
+					};
+					project.categories.forEach((category) => {
+						if (!categories.includes(category)) {
+							categories.push(category);
+						}
+					});
+					projects.push(project);
+					//Refresh Hash
+					this.refreshHash();
 				}
 				//Set data
 				this.projects = projects;
